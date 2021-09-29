@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <section class="pag1">
+    <header>
+      <img id="logo1" src="/Imagenes/logo1.png" alt="LogoRickAndMorty">
+    </header>
+    <main class="description">
+      <div>
+      <p>Rick y Morty es una serie de televisión estadounidense de animación para adultos. su primer episodio se emitio
+        en diciembre del 2013. La serie sigue las desventuras de un científico, Rick, y su fácilmente influenciable
+        nieto, Morty, quienes pasan el tiempo entre la vida doméstica y los viajes espaciales, temporales e
+        intergalácticos. Ingresa a nuestro portal y descubre a tus personajes favoritos. </p>
+      </div>
+    </main>
+    <div class="container-img">
+        <img id="arrow" alt="Arrow" src="/Imagenes/arrow.gif">
+        <img id="btn-enter" alt="button enter" src="/Imagenes/Boton inicio.gif">
+    </div>
+  </section>
+
+  <section class="pag2">
+    <header>
+      <img id="logo2" src="/Imagenes/logo2.png" alt="LogoRickAndMorty">
+    </header>
+    <main>
+      <div class="filter-Az">
+        <select name="" id="">
+          <option value="">Todos los personajes</option>
+          <option value="">A-Z</option>
+          <option value="">Z-A</option>
+        </select>
+      </div>
+
+      <div class="filter-Episodes">
+        <select name="" id="">
+          <option value="">Lista de Episodios</option>
+          <option value="">Episodio 1</option>
+          <option value="">Episodio 2</option>
+        </select>
+      </div>
+
+      <div class="filter-Species">
+        <select name="" id="">
+          <option value="" selected>Species</option>
+          <option value="">Human</option>
+          <option value="">Alien</option>
+        </select>
+      </div> 
+      
+      <div class="filter-Origin">
+        <select name="" id="">
+          <option value="">Origin</option>
+          <option value="">Unknown</option>
+          <option value="">Earth</option>
+        </select>
+      </div>
+
+      <div class="filter-Status">
+        <select name="" id="">
+          <option value="">Status</option>
+          <option value="">Alive</option>
+          <option value="">Dead</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" id= "searchInput" class="select-filter" placeholder="BUSCAR">
+      </div>
+
+     
+
+
+
+
+
+
+    </main>
+
+
+  </section>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
