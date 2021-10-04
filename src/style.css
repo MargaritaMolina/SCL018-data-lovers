@@ -8,7 +8,8 @@
 }
 
 html {
-  background: url(/Imagenes/fondo1.png);
+  background-image: url(/Imagenes/fondo1.png);
+  background-attachment: fixed; /*fija el fondo*/
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
@@ -20,7 +21,7 @@ header {
 }
 
 #logo1 {
-  width: 29%; 
+  width: 29%;
 }
 
 main div {
@@ -59,7 +60,7 @@ p {
   flex-basis: 300px;
 }
 
-.container-img :hover{
+.container-img :hover {
   transform: scale(1.1);
 }
 
@@ -81,7 +82,7 @@ p {
 }
 
 /*pag2*/
-section.pag2{
+section.pag2 {
   background-image: url(Imagenes/fondo2.png);
 }
 #logo2 {
@@ -112,93 +113,131 @@ nav {
 #searchInput {
   background-image: url(/Imagenes/lupa.png);
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   width: 10px;
   background: #00001a;
 }
-body::-webkit-scrollbar-track{
+body::-webkit-scrollbar-track {
   background: #999966;
   border-radius: 20px;
 }
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
   background: #11b0c8;
-  border-radius:20px;
+  border-radius: 20px;
 }
 
 /*contenedor de tarjetas*/
-.characterContainer{
+
+.characterContainer {
   display: flex;
   justify-content: space-around;
-  flex-flow: row wrap;
-  width: 80vw;
-  height: 69vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 75%;
+  height: 100%;
   margin-left: 2vw;
   background-color: #99999954;
-}
-
-.info-card{
-  border: 2px solid black;
-  width: 200px;
+  border-radius: 10px;
   margin-top: 20px;
 }
 
-.info-card-inner{
-  border: 2px solid red;
-}
-
-.card{
-  background: orangered;
-  border: 2px solid salmon ;
-  
-}
-.cardImage{
-  height: 15%;
-  width: 15%;
-  
-}
-/*Parte atrás de la tarjeta*/
-
-.info-card{
+.info-card {
   background-color: transparent;
-  height: 35vh;
-  width: 20vw;
-  }
-  
-.info-card-inner{
+  width: 180px;
+  height: 280px;
+  perspective: 1000px;
+  margin-top: 20px;
+}
+
+.info-card-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
-
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.info-back-card:hover .info-card-inner{
+.info-card:hover .info-card-inner {
   transform: rotateY(180deg);
 }
-
-.card .info-back-card{
+.card,
+.info-back-card {
   position: absolute;
+  width: 95%;
+  /*height: 100%;*/
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  width: 11.5vw;
-  height: 35vh;
-  border: solid 3px #fff;
   border-radius: 7px;
+  border: 2px solid #24ff00;
+  background: #000033;
 }
 
-.info-back-card{
-  background-color: black;
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 280px;
+}
+
+.card,
+#characterName {
+  /*padding-top: 2vh;*/
+  color: white;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImage {
+  height: 25vh;
+  width: 100%;
+  box-shadow: 0px 0px 50px #11b0c8;
+}
+h3 {
+  color: white;
+}
+
+.info-back-card {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   color: rgb(145, 238, 226);
   font-family: sans-serif;
   font-weight: bold;
   transform: rotateY(180deg);
-  
-}
-
-.characterInfo{
-  font-size: 15px;
-}
-.back-card-logo{
-  height: 9vh;
+  position: relative;
+  height: 280px;
   width: 100%;
 }
 
+.back-card-logo {
+  height: 9vh;
+  width: 90%;
+  padding-top: 5px;
+}
+.characterInfo {
+  word-wrap: break-word;
+}
+/*
+  font-size: 15px;
+  line-height: 20px; 
+  display: flex;
+  
+  justify-content: center;
+}*/
 
+.info-back-card p {
+  height: auto;
+  width: 10vw;
+  font-size: 15px;
+  line-height: 12px;
+  word-wrap: break-word;
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: -5px;
+}
