@@ -3,8 +3,8 @@
 //import data from './data/pokemon/pokemon.js';
 import data from "./data/rickandmorty/rickandmorty.js";
 
-console.log(example, data);
-console.log(, rickandmorty);
+//console.log(example, data);
+
 
 let btnEnter = document.querySelector("#btn-enter");
 btnEnter.addEventListener("click", nextPage);
