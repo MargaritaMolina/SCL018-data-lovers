@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
 
 /*pag1*/
 .pag1 {
@@ -84,9 +84,9 @@ p {
 }
 
 /*pag2*/
-section.pag2 {
+/*section.pag2 {
   background-image: url(Imagenes/fondo2.png);
-}
+}*/
 #logo2 {
   width: 50%;
 }
@@ -181,7 +181,6 @@ body::-webkit-scrollbar-thumb {
   height: 220px;
 }
 
-
 /*characterName {
   /*padding-top: 2vh;
   color: white;
@@ -197,7 +196,6 @@ body::-webkit-scrollbar-thumb {
   height: 25vh;
   width: 100%;
   box-shadow: 0px 0px 50px #11b0c8;
-
 }
 h3 {
   color: white;
@@ -213,7 +211,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
- 
+
   transform: rotateY(180deg);
   position: relative;
   height: 220px;
@@ -228,7 +226,6 @@ h3 {
 }
 .characterInfo {
   word-wrap: break-word;
-
 }
 /*
   font-size: 15px;
@@ -251,6 +248,6 @@ h3 {
   padding-bottom: -5px;
   color: rgb(145, 238, 226);
   font-family: "Work Sans", sans-serif;
-  margin-block-start: -20px; 
-writing-mode: horizontal-tb;
+  margin-block-start: -20px;
+  writing-mode: horizontal-tb;
 }

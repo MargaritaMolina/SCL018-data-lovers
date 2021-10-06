@@ -5,7 +5,6 @@ import data from "./data/rickandmorty/rickandmorty.js";
 
 //console.log(example, data);
 
-
 let btnEnter = document.querySelector("#btn-enter");
 btnEnter.addEventListener("click", nextPage);
 
@@ -16,11 +15,12 @@ function nextPage() {
 
 //guardar la data en una variable
 let allData = data.results;
+
 //funcion para crear las tarjetas de los personales
 function showCharacter(data) {
-  let character = "";
+  let characters = "";
   for (let i = 0; i < data.length; i++) {
-    character += `<div class="info-card">
+    characters += `<div class="info-card">
         <div class="info-card-inner">
           <div class="card" id="card">
             <img src="${data[i].image}" class="cardImage"/>
@@ -40,7 +40,45 @@ function showCharacter(data) {
         </div>
       </div>`;
   }
-  return character;
+  return characters;
 }
 
+const showNav = () => {
+  //Selecting unique values in key species
+  let species = [];
+  let origin = [];
+  allData.forEach((e) => {
+    //forEach() ejecutara la funcion indicada una vez por cada elemento del array, por lo que no dara nombres repetidos
+    species.push(e.species); //push añade nuevos elementos al final del array y devuelve uno nuevo, por lo que toma toda la data y devuelve los nombres no repetidos
+    origin.push(e.origin);
+  });
+
+  function onlyUnique(value, index, self) {
+    //Esta función descarta o elimina valores duplicados.
+    return self.indexOf(value) === index; // Self tiene un alcance global. indexOf devuelve el indice, dentro del objeto string que realiza la llamada.
+  }
+  let uniqueSpecies = species.filter(onlyUnique); //El método filter recorrerá la matriz y dejará solo aquellas entradas que pasen la función onlyUnique.
+  // onlyUnique comprueba que
+
+  let uniqueOrigin = origin.filter(onlyUnique);
+  //creating navigation with unique values
+
+  let nav = `<nav class="allFilters">
+    <div class="filter-Species">
+      <select name="" id="" class="selectFilter">
+      <option value="species" selected>Species</option>
+      `;
+
+  uniqueSpecies.forEach((e) => {
+    nav += `<option value="${e}">${e}</option>`;
+    // console.log(e);
+  });
+
+  nav += `</select>
+    </div>
+  </nav>`;
+  return nav;
+};
+
 document.getElementById("characterList").innerHTML = showCharacter(allData);
+document.getElementById("allFilters").innerHTML += showNav();
