@@ -44,13 +44,35 @@ function showCharacter(data) {
 }
 
 const showNav = () => {
+// Ordenar alfabeticamente
+
   //Selecting unique values in key species
+
   let species = [];
   let origin = [];
+  let status = [];
+  let gender = [];
+  let location = [];
+
   allData.forEach((e) => {
     //forEach() ejecutara la funcion indicada una vez por cada elemento del array, por lo que no dara nombres repetidos
     species.push(e.species); //push añade nuevos elementos al final del array y devuelve uno nuevo, por lo que toma toda la data y devuelve los nombres no repetidos
-    origin.push(e.origin);
+  });
+
+  allData.forEach((e) => {
+    origin.push(e.origin.name);
+  });
+
+  allData.forEach((e) => {
+    status.push(e.status);
+  });
+
+  allData.forEach((e) => {
+    gender.push(e.gender);
+  });
+
+  allData.forEach((e) => {
+    location.push(e.location.name);
   });
 
   function onlyUnique(value, index, self) {
@@ -61,9 +83,15 @@ const showNav = () => {
   // onlyUnique comprueba que
 
   let uniqueOrigin = origin.filter(onlyUnique);
+
+  let uniqueStatus = status.filter(onlyUnique);
+
+  let uniqueGender = gender.filter(onlyUnique);
+
+  let uniqueLocation = location.filter(onlyUnique);
   //creating navigation with unique values
 
-  let nav = `<nav class="allFilters">
+  let nav = `<nav class="allFilters"> 
     <div class="filter-Species">
       <select name="" id="" class="selectFilter">
       <option value="species" selected>Species</option>
@@ -76,6 +104,60 @@ const showNav = () => {
 
   nav += `</select>
     </div>
+
+  <div class="filter-Origin">
+    <select name="" id="" class="selectFilter">
+    <option value="Origin" selected>Origin</option>
+    `;
+
+  uniqueOrigin.forEach((e) => {
+    nav += `<option value="${e}">${e}</option>`;
+  });
+
+  nav += `</select>
+  </div>
+  <div class="filter-Status">
+    <select name="" id="" class="selectFilter">
+    <option value="status" selected>Status</option>`;
+
+  uniqueStatus.forEach((e) => {
+    nav += `<option value="${e}">${e}</option>`;
+  });
+
+  nav += `</select>
+    </div>
+
+  <div class="filter-Gender">
+    <select name="" id="" class="selectFilter">
+    <option value="Genero" selected>Gender</option>
+    `;
+
+  uniqueGender.forEach((e) => {
+    nav += `<option value="${e}">${e}</option>`;
+  });
+
+  nav += `</select>
+  </div>
+  <div class="filter-Location">
+    <select name="" id="" class="selectFilter">
+    <option value="Locacion" selected>Location</option>
+    `;
+
+  uniqueLocation.forEach((e) => {
+    nav += `<option value="${e}">${e}</option>`;
+  });
+
+  nav += `</select>
+  </div>
+
+  <div>
+          <input
+            type="text"
+            id="searchInput"
+            class="selectFilter"
+      
+          />
+        </div>
   </nav>`;
   return nav;
 };
