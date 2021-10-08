@@ -94,6 +94,15 @@ const showNav = () => {
   //creating navigation with unique values
 
   let nav = `<nav class="allFilters"> 
+    <div class="all-Caracters">
+      <select name ="" id="selCaracters" class="selectFilter">
+      <option value="allCaracters" selected>Characters </option>
+      ´;
+      nav += ´<option value="a-z">A-Z</option>´;
+      nav += ´<option value="z-a">Z-A</option>´;
+  nav += ´</select>
+     </div>
+
     <div class="filter-Species">
       <select name="" id="selSpecies" class="selectFilter">
       <option value="species" selected>Species</option>
@@ -108,7 +117,7 @@ const showNav = () => {
     </div>
 
   <div class="filter-Origin">
-    <select name="" id="" class="selectFilter">
+    <select name="" id="selOrigin" class="selectFilter">
     <option value="Origin" selected>Origin</option>
     `;
 
@@ -119,7 +128,7 @@ const showNav = () => {
   nav += `</select>
   </div>
   <div class="filter-Status">
-    <select name="" id="" class="selectFilter">
+    <select name="" id="selStatus" class="selectFilter">
     <option value="status" selected>Status</option>`;
 
   uniqueStatus.forEach((e) => {
@@ -178,4 +187,28 @@ selSpecies.addEventListener("change", function (e) {
   let onlySpecie = filterContainer.speciesFilter(allData, specie);
   document.getElementById("characterList").innerHTML +=
     showCharacter(onlySpecie);
+});
+
+const selOrigin = document.querySelector("#selOrigin");
+
+selOrigin.addEventListener("change", function (e) {
+  const originOptions = e.target.options;
+  const selectedOrigin = originOptions[originOptions.selectedIndex].text;
+  div.innerHTML = "";
+  let origin1 = selectedOrigin;
+  let onlyOrigin1 = filterContainer.originFilter(allData, origin1);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlyOrigin1);
+});
+
+const selStatus = document.querySelector("#selStatus");
+
+selStatus.addEventListener("change", function (e) {
+  const statusOptions = e.target.options;
+  const selectedStatus = statusOptions[statusOptions.selectedIndex].text;
+  div.innerHTML = "";
+  let statu = selectedStatus;
+  let onlyStatu = filterContainer.statusFilter(allData, statu);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlyStatu);
 });
