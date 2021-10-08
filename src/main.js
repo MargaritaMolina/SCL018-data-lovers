@@ -2,6 +2,7 @@
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 import data from "./data/rickandmorty/rickandmorty.js";
+import filterContainer from "./data.js";
 
 //console.log(example, data);
 
@@ -15,8 +16,9 @@ function nextPage() {
 
 //guardar la data en una variable
 let allData = data.results;
-
+let div = document.getElementById("characterList");
 //funcion para crear las tarjetas de los personales
+
 function showCharacter(data) {
   let characters = "";
   for (let i = 0; i < data.length; i++) {
@@ -44,7 +46,7 @@ function showCharacter(data) {
 }
 
 const showNav = () => {
-// Ordenar alfabeticamente
+  // Ordenar alfabeticamente
 
   //Selecting unique values in key species
 
@@ -93,13 +95,13 @@ const showNav = () => {
 
   let nav = `<nav class="allFilters"> 
     <div class="filter-Species">
-      <select name="" id="" class="selectFilter">
+      <select name="" id="selSpecies" class="selectFilter">
       <option value="species" selected>Species</option>
       `;
 
   uniqueSpecies.forEach((e) => {
     nav += `<option value="${e}">${e}</option>`;
-    // console.log(e);
+    //console.log(e);
   });
 
   nav += `</select>
@@ -164,3 +166,16 @@ const showNav = () => {
 
 document.getElementById("characterList").innerHTML = showCharacter(allData);
 document.getElementById("allFilters").innerHTML += showNav();
+
+// This is where filtering happens!
+const selSpecies = document.querySelector("#selSpecies");
+
+selSpecies.addEventListener("change", function (e) {
+  const speciesOptions = e.target.options;
+  const selectedSpecie = speciesOptions[speciesOptions.selectedIndex].text;
+  div.innerHTML = "";
+  let specie = selectedSpecie;
+  let onlySpecie = filterContainer.speciesFilter(allData, specie);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlySpecie);
+});
