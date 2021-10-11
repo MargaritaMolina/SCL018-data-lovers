@@ -97,7 +97,7 @@ nav .allFilters {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  margin-left: 150px;
+  margin-left: 29px;
   margin-right: 250px;
   margin-top: 20px;
 }
@@ -122,7 +122,7 @@ nav .allFilters {
   background-position: 2vh;
   background-position-x: 18vh;
   background-position-y: center;
-  background-size: 3.9vh;
+  background-size: 4vh;
   outline: none;
   
   /*width: 2vw;
@@ -154,6 +154,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #99999954;
   border-radius: 10px;
   margin-top: 20px;
+  padding-bottom: 15px;
 }
 
 .info-card {
@@ -209,6 +210,7 @@ body::-webkit-scrollbar-thumb {
   height: 25vh;
   width: 100%;
   box-shadow: 0px 0px 50px #11b0c8;
+  border-radius: 5px 5px 0px 0px; /*sup izq-sup der-inf der-inf izq*/
 }
 h3 {
   color: white;
