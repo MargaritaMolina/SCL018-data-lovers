@@ -139,7 +139,7 @@ const showNav = () => {
     </div>
 
   <div class="filter-Gender">
-    <select name="" id="" class="selectFilter">
+    <select name="" id="selGender" class="selectFilter">
     <option value="Genero" selected>Gender</option>
     `;
 
@@ -150,7 +150,7 @@ const showNav = () => {
   nav += `</select>
   </div>
   <div class="filter-Location">
-    <select name="" id="" class="selectFilter">
+    <select name="" id="selLocation" class="selectFilter">
     <option value="Locacion" selected>Location</option>
     `;
 
@@ -211,4 +211,38 @@ selStatus.addEventListener("change", function (e) {
   let onlyStatu = filterContainer.statusFilter(allData, statu);
   document.getElementById("characterList").innerHTML +=
     showCharacter(onlyStatu);
+});
+
+const selGender = document.querySelector("#selGender");
+
+selGender.addEventListener("change", function (e) {
+  const genderOptions = e.target.options;
+  const selectedGender = genderOptions[genderOptions.selectedIndex].text;
+  div.innerHTML = "";
+  let gende = selectedGender;
+  let onlyGende = filterContainer.genderFilter(allData, gende);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlyGende);
+});
+
+const selLocation = document.querySelector("#selLocation");
+
+selLocation.addEventListener("change", function (e) {
+  const locationOptions = e.target.options;
+  const selectedLocation = locationOptions[locationOptions.selectedIndex].text;
+  div.innerHTML = "";
+  let locatio = selectedLocation;
+  let onlyLocatio = filterContainer.locationFilter(allData, locatio);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlyLocatio);
+});
+
+const searchInput = document.querySelector("#searchInput");
+
+searchInput.addEventListener("keyup", (e) => {
+  const inputSearch = e.target.value;
+  div.innerHTML = "";
+  let onlySearch = filterContainer.searchFilter(allData, inputSearch);
+  document.getElementById("characterList").innerHTML +=
+    showCharacter(onlySearch);
 });
