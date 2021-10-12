@@ -87,6 +87,9 @@ p {
 /*section.pag2 {
   background-image: url(Imagenes/fondo2.png);
 }*/
+.pag2{
+}
+
 #logo2 {
   width: 50%;
 }
@@ -155,6 +158,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   margin-top: 20px;
   padding-bottom: 15px;
+  float: left;
 }
 
 .info-card {
@@ -265,4 +269,20 @@ h3 {
   font-family: "Work Sans", sans-serif;
   margin-block-start: -20px;
   writing-mode: horizontal-tb;
+}
+
+aside {
+  display: inline-block;
+  width: 20%;
+  min-height: auto;
+  float: left;
+  margin-left: 30px;
+  margin-top: 22px;
+  
+}
+
+.gifs {
+  width: 15vw;
+  height: auto;
+  box-shadow: 0px 0px 25px #11b0c8;
 }
