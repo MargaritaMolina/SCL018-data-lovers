@@ -12,7 +12,7 @@ const filterContainer = {
     let onlyOrigin = allData.filter((character) => {
       return character.origin.name === origin; //se debe agregar el .name para poder acceder a los datos
     });
-    console.log(onlyOrigin);
+    //console.log(onlyOrigin);
     return onlyOrigin;
   },
   statusFilter(allData, status) {
