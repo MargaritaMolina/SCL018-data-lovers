@@ -14,6 +14,14 @@ function nextPage() {
   document.querySelector(".pag2").style.display = "block";
 }
 
+let btnBack = document.querySelector("#btnBack");
+btnBack.addEventListener("click", backPage);
+
+function backPage() {
+  document.querySelector(".pag1").style.display = "block";
+  document.querySelector(".pag2").style.display = "none";
+}
+
 //guardar la data en una variable
 let allData = data.results;
 let div = document.getElementById("characterList");

@@ -39,7 +39,6 @@ main div {
   width: auto;
   display: flex;
   justify-content: center;
-  /*align-items: center;*/
 }
 p {
   width: 637px;
@@ -81,13 +80,7 @@ p {
 #btn-enter {
   width: 30%;
   transition: all 300ms;
-}
-
-/*pag2*/
-/*section.pag2 {
-  background-image: url(Imagenes/fondo2.png);
-}*/
-.pag2{
+  cursor: pointer;
 }
 
 #logo2 {
@@ -100,9 +93,9 @@ nav .allFilters {
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-around;
-  margin-left: 29px;
-  margin-right: 250px;
-  margin-top: 20px;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  margin-top: 3vh;
 }
 
 .selectFilter {
@@ -117,6 +110,7 @@ nav .allFilters {
   border: 2px solid #24ff00;
   width: 10vw;
   /*height: 40px;*/
+  box-shadow: 0px 0px 15px #11b0c8;
 }
 
 #searchInput {
@@ -127,9 +121,6 @@ nav .allFilters {
   background-position-y: center;
   background-size: 4vh;
   outline: none;
-  
-  /*width: 2vw;
-  height: 3vh;*/
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -153,12 +144,13 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   width: 75%;
   height: 100%;
-  margin-left: 2vw;
+  margin-left: 12vw;
   background-color: #99999954;
   border-radius: 10px;
   margin-top: 20px;
   padding-bottom: 15px;
-  float: left;
+  margin-bottom: 5vh;
+
 }
 
 .info-card {
@@ -199,17 +191,6 @@ body::-webkit-scrollbar-thumb {
   height: 220px;
 }
 
-/*characterName {
-  /*padding-top: 2vh;
-  color: white;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  border: 2px solid #24ff00;
-}*/
-
 .cardImage {
   height: 25vh;
   width: 100%;
@@ -230,7 +211,6 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   transform: rotateY(180deg);
   position: relative;
   height: 220px;
@@ -246,20 +226,12 @@ h3 {
 .characterInfo {
   word-wrap: break-word;
 }
-/*
-  font-size: 15px;
-  line-height: 20px; 
-  display: flex;
-  
-  justify-content: center;
-}*/
 
 .info-back-card p {
   height: auto;
   width: 10vw;
   font-size: 13px;
   line-height: 12px;
-  /*margin: 10px 0;*/
   word-wrap: break-word;
   display: flex;
   justify-content: left;
@@ -272,17 +244,33 @@ h3 {
 }
 
 aside {
-  display: inline-block;
-  width: 20%;
+  display: flex;
+  flex-direction:row ;
   min-height: auto;
-  float: left;
   margin-left: 30px;
   margin-top: 22px;
-  
+  box-shadow: 0px 0px 25px #11b0c8;
+  margin-right: 20px;
 }
 
 .gifs {
-  width: 15vw;
+  width: 13vw;
   height: auto;
-  box-shadow: 0px 0px 25px #11b0c8;
+}
+
+.btn-back{
+  position: fixed; /*fijo en la pantalla*/
+  bottom: 0;
+  right:0;
+  margin-right: -2.7vw;
+  margin-bottom: -3.5vw;
+  cursor: pointer;
+}
+
+#btnBack{
+  width: 14vw;
+}
+
+.btn-back:hover {
+  transform: scale(1.1);
 }
