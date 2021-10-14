@@ -1,6 +1,31 @@
 // estas funciones son de ejemplo
+//export const toOrderAZ = (allData, orderType) => {
+//  if (orderType == 1) sortData(allData, "name", "asc");
+//  else sortData(allData, "name", "desc");
 
-const filterContainer = {
+//  return allData;
+//};
+
+export const sortData = (characters, sortOrder) => {
+  const rickandmorty = characters;
+  const sortResult = rickandmorty.sort((a,b)=> {
+  if (a.name > b.name) {
+    return 1;
+} if (a.name < b.name) {
+    return -1;
+}
+return 0;
+  });
+  //console.log(sortOrder);
+  if(sortOrder==='orderDesc'){
+    return sortResult.reverse();
+  }
+return sortResult;
+};
+
+
+export const filterContainer = {
+
   speciesFilter(allData, species) {
     let onlySpecies = allData.filter((character) => {
       return character.species === species;
@@ -43,4 +68,4 @@ const filterContainer = {
   },
 };
 
-export default filterContainer;
+//export default //filterContainer;

@@ -2,9 +2,9 @@
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 import data from "./data/rickandmorty/rickandmorty.js";
-import filterContainer from "./data.js";
+import {filterContainer, sortData} from "./data.js";
 
-//console.log(example, data);
+//onsole.log(sortData);
 
 let btnEnter = document.querySelector("#btn-enter");
 btnEnter.addEventListener("click", nextPage);
@@ -103,11 +103,12 @@ const showNav = () => {
 
   let nav = `<nav class="allFilters"> 
     <div class="all-Caracters">
-      <select name ="" id="selCaracters" class="selectFilter">
-      <option value="allCaracters" selected>Characters </option>
+      <select name ="" id="selCharacters" class="selectFilter">
+      <option value="allCharacters"  selected>Characters </option>
       ´;
-      nav += ´<option value="a-z">A-Z</option>´;
-      nav += ´<option value="z-a">Z-A</option>´;
+      nav += ´<option id="orderAs" value="orderAsc">A-Z</option>´;
+      nav += ´<option id="orderDes" value="orderDesc">Z-A</option>´;
+      nav += ´<option id="defaultOrder" value="allCharacters">Default order</option>´;
   nav += ´</select>
      </div>
 
@@ -174,7 +175,6 @@ const showNav = () => {
             type="text"
             id="searchInput"
             class="selectFilter"
-      
           />
         </div>
   </nav>`;
@@ -184,7 +184,22 @@ const showNav = () => {
 document.getElementById("characterList").innerHTML = showCharacter(allData);
 document.getElementById("allFilters").innerHTML += showNav();
 
+//Ordenando los personajes
+
 // This is where filtering happens!
+
+
+let selOrder = document.getElementById("selCharacters");
+selOrder.addEventListener("change", () =>{
+  const selByOrder = sortData(allData, selOrder.value);
+  //console.log(selOrder.value);
+  const show = (data)=>{
+    div.innerHTML= "";
+      div.innerHTML += showCharacter(data);
+  } 
+  show (selByOrder);
+});
+
 const selSpecies = document.querySelector("#selSpecies");
 
 selSpecies.addEventListener("change", function (e) {
