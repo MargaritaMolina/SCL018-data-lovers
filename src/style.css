@@ -205,6 +205,10 @@ h3 {
   text-align: center;
 }
 
+.characterName{
+  overflow: hidden;
+}
+
 .info-back-card {
   display: flex;
   text-align: center;
@@ -250,7 +254,7 @@ aside {
   margin-left: 30px;
   margin-top: 22px;
   box-shadow: 0px 0px 25px #11b0c8;
-  margin-right: 20px;
+  margin-right: 70px;
 }
 
 .gifs {
