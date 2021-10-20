@@ -2,7 +2,7 @@
 // import data from './data/lol/lol.js';
 //import data from './data/pokemon/pokemon.js';
 import data from "./data/rickandmorty/rickandmorty.js";
-import {filterContainer, sortData} from "./data.js";
+import { filterContainer, sortData } from "./data.js";
 
 //onsole.log(sortData);
 
@@ -108,7 +108,7 @@ const showNav = () => {
       ´;
       nav += ´<option id="orderAs" value="orderAsc">A-Z</option>´;
       nav += ´<option id="orderDes" value="orderDesc">Z-A</option>´;
-      nav += ´<option id="defaultOrder" value="allCharacters">Default order</option>´;
+    
   nav += ´</select>
      </div>
 
@@ -188,16 +188,15 @@ document.getElementById("allFilters").innerHTML += showNav();
 
 // This is where filtering happens!
 
-
 let selOrder = document.getElementById("selCharacters");
-selOrder.addEventListener("change", () =>{
+selOrder.addEventListener("change", () => {
   const selByOrder = sortData(allData, selOrder.value);
   //console.log(selOrder.value);
-  const show = (data)=>{
-    div.innerHTML= "";
-      div.innerHTML += showCharacter(data);
-  } 
-  show (selByOrder);
+  const show = (data) => {
+    div.innerHTML = "";
+    div.innerHTML += showCharacter(data);
+  };
+  show(selByOrder);
 });
 
 const selSpecies = document.querySelector("#selSpecies");
