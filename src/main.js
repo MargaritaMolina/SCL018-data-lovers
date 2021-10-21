@@ -33,8 +33,9 @@ function showCharacter(data) {
     characters += `<div class="info-card">
         <div class="info-card-inner">
           <div class="card" id="card">
+          <div class="image">
             <img src="${data[i].image}" class="cardImage"/>
-          
+          </div>
           <div class="characterName">
             <h3 id="charName">${data[i].name}</h3>
           </div>
@@ -67,6 +68,7 @@ const showNav = () => {
   allData.forEach((e) => {
     //forEach() ejecutara la funcion indicada una vez por cada elemento del array, por lo que no dara nombres repetidos
     species.push(e.species); //push añade nuevos elementos al final del array y devuelve uno nuevo, por lo que toma toda la data y devuelve los nombres no repetidos
+ 
   });
 
   allData.forEach((e) => {

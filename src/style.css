@@ -91,12 +91,12 @@ p {
   }
   */
   main div {
-    margin-right: 13vw;
-    margin-top: 5vw;
+    /*margin-right: 13vw;*/
+    margin-top: 9vw;
   }
   .pag1 #logo1 {
     width: 45vw;
-    margin-right: 13vw;
+    margin-top: 5vw;
   }
   .pag1 .description {
     width: auto;
@@ -109,8 +109,8 @@ p {
   .pag1 .container-img {
     display: flex;
     justify-content: center;
-    margin-left: 18vw;
-    margin-top: 8vh;
+    margin-left: 21vw;
+    margin-top: 10vh;
   }
   .pag1 .container-img #arrow {
     width: 16vw;
@@ -337,16 +337,69 @@ aside {
 /*Version Mobile segunda pagina*/
 @media screen and (max-width: 425px) {
   .pag2 #logo2 {
-    width: 50vw;
-    margin-right: 13vw;
+    width: 70vw;
+    margin-top: 2vh;
   }
   nav .allFilters {
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    gap: 1vw;
+    margin-top: 2vh;
   }
   .selectFilter {
     width: 20vw;
     font-size: 2.5vw;
     margin-left: 0vw;
     margin-right: 0vw;
+  }
+  #searchInput{
+    background-position-x: 21vh;
+    width: 32vw;
+  }
+  .characterContainer{
+    width: 90%;
+    margin-left: 5vw;
+    row-gap: 2vw;
+  }
+  .info-card {
+    width: 110px;
+    height: 154px;
+    margin-left: 0.5vw;
+    margin-top: 10px;
+  }
+  .card{
+    height: 154px;
+  }
+  .card .image{
+    height: 70%;
+  }
+  .cardImage {
+    height: 100%;
+  }
+  .characterName {
+    height: 30%;
+  }
+  h3{
+    margin-top: 4px;
+    font-size: 4vw;
+  }
+  .info-back-card{
+    width: 110px;
+    height: 156px;
+  }
+  .back-card-logo{
+    width: 90%;
+    height: auto;
+  }
+  .info-back-card p{
+    width: 21vw;
+    font-size: 10px;
+    line-height: 9px;
+    line
+  }
+  #btnBack {
+    width: 24vw;
+  }
+  aside{
+    margin-left: 3vw;
   }
 }
