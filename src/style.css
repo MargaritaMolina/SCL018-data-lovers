@@ -10,7 +10,7 @@
 }
 
 html {
-  background-image: url(..../src/Imagenes/fondo1.png);
+  background-image: url(../src/Imagenes/fondo1.png);
   background-attachment: fixed; /*fija el fondo*/
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,7 +81,7 @@ p {
 #btn-enter {
   width: 30%;
   transition: all 300ms;
-  cursor: url(..../src/Imagenes/cursor2.png), auto;
+  cursor: url(../src/Imagenes/cursor2.png), auto;
 }
 /*Version Mobile primera pagina*/
 @media screen and (max-width: 425px) {
