@@ -8,15 +8,15 @@ Por otra parte, esta aplicación es responsive para teléfonos móviles.
 # Etapa de Diseño :hammer_and_wrench:
 En el proceso de diseño se destacan los siguientes pasos:
 
-*Investigar sobre la serie, sus personajes, imágenes, botones y colores que podrían utilizarse.
+* Investigar sobre la serie, sus personajes, imágenes, botones y colores que podrían utilizarse.
 
-*Con el propósito de conocer a nuestros usuarios, creamos y aplicamos una encuesta para obtener nuestras historias de usuario. 
+* Con el propósito de conocer a nuestros usuarios, creamos y aplicamos una encuesta para obtener nuestras historias de usuario. 
 
-*A partir del resultado de la encuesta, definimos las historias de usuario, los criterios de aceptación y de terminado. 
+* A partir del resultado de la encuesta, definimos las historias de usuario, los criterios de aceptación y de terminado. 
 
-*Creamos un prototipo en papel tomando en cuenta la encuesta, y agregando ideas nuestras. Así se fue configurando con los elementos necesarios para estructurar la página.
+* Creamos un prototipo en papel tomando en cuenta la encuesta, y agregando ideas nuestras. Así se fue configurando con los elementos necesarios para estructurar la página.
 
-*Luego, hicimos un prototipo en Figma, haciendo pruebas en cuanto a la distribución de los elementos, imágenes, textos y colores. Este prototipo se fue ajustando durante el proceso tras recibir feedback de coaches y estudiantes. 
+* Luego, hicimos un prototipo en Figma, haciendo pruebas en cuanto a la distribución de los elementos, imágenes, textos y colores. Este prototipo se fue ajustando durante el proceso tras recibir feedback de coaches y estudiantes. 
 
 ## Resultado Encuesta
 ![img](https://i.imgur.com/HamPmJR.png)
@@ -50,3 +50,9 @@ En el proceso de diseño se destacan los siguientes pasos:
 
 # Test de usabilidad
 En el testeo del uso de la página, nuestros usuarios pudieron moverse sin problemas por el sitio, pudiendo ejecutar las tareas o instrucciones dadas. En este caso, se detectó que si bien el click del puntero desplegaba las opciones de los filtros, al recorrer la lista no era posible ver el puntero personalizado sino solo la flecha. 
+
+##:pencil: Creado por
+**Stefanya Pulgar Baeza**
+
+# Agradecimientos :two_hearts:
+_Equipo de Laboratoria Chile_
