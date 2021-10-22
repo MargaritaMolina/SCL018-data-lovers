@@ -411,7 +411,7 @@ footer p {
     width: 21vw;
     font-size: 10px;
     line-height: 9px;
-    margin-left: 18vw;
+    /*margin-left: 18vw;*/
   }
   #btnBack {
     width: 24vw;
