@@ -41,7 +41,7 @@ function showCharacter(data) {
           </div>
           </div>
           <div class="info-back-card">
-            <img src="/src/imagenes/RickandMorty.png" class=" back-card-logo">
+            <img src="../src/imagenes/RickandMorty.png" class=" back-card-logo">
             <p class="characterInfo"> Estado de vida: ${data[i].status}</p>
             <p class="characterInfo"> Especie: ${data[i].species}</p>
             <p class="characterInfo"> Genero: ${data[i].gender}</p>
