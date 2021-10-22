@@ -52,7 +52,7 @@ En el proceso de diseño se destacan los siguientes pasos:
 En el testeo del uso de la página, nuestros usuarios pudieron moverse sin problemas por el sitio, pudiendo ejecutar las tareas o instrucciones dadas. En este caso, se detectó que si bien el click del puntero desplegaba las opciones de los filtros, al recorrer la lista no era posible ver el puntero personalizado sino solo la flecha. 
 
 ## :pencil: Creado por
-**Stefanya Pulgar Baeza**
+**Stefanya Pulgar Baeza** y
 **Margarita Molina Beltran**
 
 # Agradecimientos :two_hearts:
