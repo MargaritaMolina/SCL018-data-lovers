@@ -41,7 +41,7 @@ function showCharacter(data) {
           </div>
           </div>
           <div class="info-back-card">
-            <img src="../src/imagenes/RickandMorty.png" class=" back-card-logo">
+            <img src="../src/Imagenes/RickandMorty.png" class=" back-card-logo">
             <p class="characterInfo"> Estado de vida: ${data[i].status}</p>
             <p class="characterInfo"> Especie: ${data[i].species}</p>
             <p class="characterInfo"> Genero: ${data[i].gender}</p>
@@ -68,7 +68,6 @@ const showNav = () => {
   allData.forEach((e) => {
     //forEach() ejecutara la funcion indicada una vez por cada elemento del array, por lo que no dara nombres repetidos
     species.push(e.species); //push añade nuevos elementos al final del array y devuelve uno nuevo, por lo que toma toda la data y devuelve los nombres no repetidos
- 
   });
 
   allData.forEach((e) => {
